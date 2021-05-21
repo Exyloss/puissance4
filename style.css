@@ -1,0 +1,50 @@
+td {
+    border: black solid 2px;
+    width: 50px;
+    height: 50px;
+}
+
+#bateau1 {
+	background-color: yellow;
+}
+
+#bateau2 {
+	background-color: #EA4CC8;
+}
+
+#bateau3 {
+	background-color: blue;
+}
+
+#bateau4 {
+	background-color: green;
+}
+
+#bateaux {
+	margin-top: 20px;
+}
+
+#bateaux tr td:hover {
+	border-color: green;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+}
+
+#orientation {
+	text-align: center;
+}
+
+button {
+	width: 54px;
+	height: 50px;
+	border: none;
+	background-color: lightgray;
+}
+
+button:hover {
+	transition: 0.3s;
+	background-color: gray;
+}
