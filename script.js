@@ -49,7 +49,7 @@ function jeton(id) {
 			}
 		}
 	}
-	if (victoire == 4) {console.log("joueur "+victoirej+" gagne")}
+	if (victoire == 4) {alert("joueur "+victoirej+" gagne")}
 	victoire=0;
 	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
