@@ -23,11 +23,10 @@ function jeton(id) {
 			if ( color=="red" ) {
 				dicValue["#"+colonne+i] = 1;
 				console.log(dicValue);
-			} else {
+			} else if ( color=="yellow" ) {
 				dicValue["#"+colonne+i] = 2;
 				console.log(dicValue);
 			}
-			pos="#"+colonne+i;
 			break;
 		}
 	}
@@ -36,22 +35,67 @@ function jeton(id) {
 	} else {
 		color='red';
 	}
-	for (i=1;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
+	for (i=7;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
 		for (j=0;j<=6;j++) {
-			for (k=0;k<=4;k++) {
-				if (victoire == 4) {
+			if (victoire == 3) {
+				break;
+			}
+			if (dicValue["#"+listLettre[j]+i]==dicValue["#"+listLettre[j+1]+i] && dicValue["#"+listLettre[j]+i]!=0) {
+				victoirej=dicValue["#"+listLettre[j+1]+i];
+				victoire++;
+				console.log(victoire+"  "+dicValue["#"+listLettre[j]+i]+" "+dicValue["#"+listLettre[j+1]+i]);
+			} else {victoire=0;}
+		}
+	}
+	if (victoire == 3) {alert("joueur "+victoirej+" gagne")}
+	victoire=0;
+	for (i=0;i<=6;i++) {
+		for (j=1;j<=7;j++) {
+			if (victoire == 3) {
+				break;
+			}
+			if (dicValue["#"+listLettre[i]+j]==dicValue["#"+listLettre[i]+(j-1)] && dicValue["#"+listLettre[i]+(j-1)]!=0) {
+				victoirej=dicValue["#"+listLettre[i]+(j-1)];
+				victoire++;
+			} else {victoire=0;}
+		}
+	}
+	if (victoire==3) {alert("gagne"+victoirej)}
+	victoire=0;
+	for (i=0;i<=6;i++) {
+		for (j=1;j<=7;j++) {
+			for (k=0;k<=3;k++) {
+				if (victoire==3) {
 					break;
 				}
-				if (dicValue["#"+listLettre[j+k]+i]==dicValue["#"+listLettre[j]+i] && dicValue["#"+listLettre[j]+i]!=0) {
-					victoirej=dicValue["#"+listLettre[j+k]+i];
+				if (dicValue["#"+listLettre[i+k]+(j-k)]==dicValue["#"+listLettre[i+k+1]+(j-k-1)] && dicValue["#"+listLettre[i+k+1]+(j-k-1)]!=0 && dicValue["#"+listLettre[i+k+1]+(j-k-1)]!=undefined) {
+					victoirej=dicValue["#"+listLettre[i+k+1]+(j-k-1)];
 					victoire++;
+				} else {victoire=0;}
+			}	
+		}
+	}
+	if (victoire==3) {alert("gagne"+victoirej)}
+	victoire=0;
+	for (i=6;i<=6;i++) {
+		for (j=1;j<=7;j++) {
+			for(k=0;k<=3;k++) {
+				if (victoire==3) {
+					break;
+				}
+				if (dicValue["#"+listLettre[i-k]+(j-k)]==dicValue["#"+listLettre[i-k-1]+(j-k-1)] && dicValue["#"+listLettre[i-k-1]+(j-k-1)]!=0 && dicValue["#"+listLettre[i-k-1]+(j-k-1)]!=undefined) {
+					victoirej=dicValue["#"+listLettre[i-k-1]+(j-k-1)];
+					victoire++;
+					console.log(victoire);
 				} else {victoire=0;}
 			}
 		}
 	}
-	if (victoire == 4) {console.log("joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert("gagne"+victoirej)}
 	victoire=0;
-	for (i=0;i<=6;i++) {
+
+
+	/*for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
 			for (k=0;k<=4;k++) {
 				if (victoire==4) {
@@ -75,7 +119,6 @@ function jeton(id) {
 				if (dicValue["#"+listLettre[i+k]+(j+k)]==dicValue["#"+listLettre[i]+j] && dicValue["#"+listLettre[i]+j]!=0) {
 					victoirej=dicValue["#"+listLettre[i+k]+(j+k)];
 					victoire++;
-					console.log(victoire);
 				} else {victoire=0;}
 			
 			}
@@ -92,16 +135,12 @@ function jeton(id) {
 				if (dicValue["#"+listLettre[i+k]+(j-k)]==dicValue["#"+listLettre[i]+j] && dicValue["#"+listLettre[i]+j]!=0) {
 					victoirej=dicValue["#"+listLettre[i+k]+(j-k)];
 					victoire++;
-					console.log(victoire);
 				} else {victoire=0;}
 			
 			}
 		}
 	}
 	if (victoire==4) {alert("joueur "+victoirej+" gagne");}
-	victoire=0;
-
-
-
+	victoire=0;*/
 
 }
