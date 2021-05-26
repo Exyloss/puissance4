@@ -35,7 +35,7 @@ function jeton(id) {
 	} else {
 		color='red';
 	}
-	for (i=7;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
+	for (i=1;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
 		for (j=0;j<=6;j++) {
 			if (victoire == 3) {
 				break;
