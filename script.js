@@ -11,29 +11,42 @@ var dicValue = {
 "#F1":0,"#F2":0,"#F3":0,"#F4":0,"#F5":0,"#F6":0,"#F7":0,
 "#G1":0,"#G2":0,"#G3":0,"#G4":0,"#G5":0,"#G6":0,"#G7":0,
 };
-var color="red";
+var colorList=["red","yellow"];
+var color=colorList[0];
 var victoire = 0;
 var victoirej = 0;
+
+function effacer() {
+	$("#inputColor1").val("");
+	$("#inputColor2").val("");
+}
+
+function choiseColor() {
+	if ($("#inputColor1").val() != $("#inputColor2").val() && $("#inputColor1").val() != "white" && $("#inputColor2").val() != "white" && $("#inputColor2").val() != "#000000" && $("#inputColor1").val() != "#000000") {
+		colorList=[$("#inputColor1").val(),$("#inputColor2").val()];
+		color=colorList[0];
+	}
+}
 function jeton(id) {
 	colonne = id[4];
 	console.log(dicValue);
 	for (i=7;i>=1;i--) {
 		if(dicValue["#"+colonne+i] == 0) {
 			$("#"+colonne+i).css("background-color",color);
-			if ( color=="red" ) {
+			if ( color==colorList[0] ) {
 				dicValue["#"+colonne+i] = 1;
 				console.log(dicValue);
-			} else if ( color=="yellow" ) {
+			} else if ( color==colorList[1] ) {
 				dicValue["#"+colonne+i] = 2;
 				console.log(dicValue);
 			}
 			break;
 		}
 	}
-	if (color == "red") {
-		color = "yellow";
+	if (color == colorList[0]) {
+		color = colorList[1];
 	} else {
-		color='red';
+		color=colorList[0];
 	}
 	for (i=1;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
 		for (j=0;j<=6;j++) {
@@ -77,7 +90,7 @@ function jeton(id) {
 	}
 	if (victoire==3) {alert("joueur "+victoirej+" gagne")}
 	victoire=0;
-	for (i=6;i<=6;i++) {
+	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
 			for(k=0;k<=3;k++) {
 				if (victoire==3) {

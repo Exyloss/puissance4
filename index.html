@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
 <script type="text/javascript" src="jquery-3.6.0.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <title>Puissance 4</title>
@@ -80,13 +81,19 @@
 
         </tr>
 	<tr>
-		<td><button id="btnA" onclick="jeton('#btnA')">A</button></td>
-		<td><button id="btnB" onclick="jeton('#btnB')">B</button></td>
-		<td><button id="btnC" onclick="jeton('#btnC')">C</button></td>
-		<td><button id="btnD" onclick="jeton('#btnD')">D</button></td>
-		<td><button id="btnE" onclick="jeton('#btnE')">E</button></td>
-		<td><button id="btnF" onclick="jeton('#btnF')">F</button></td>
-		<td><button id="btnG" onclick="jeton('#btnG')">G</button></td>
+		<td><button class="btnCol" id="btnA" onclick="jeton('#btnA')">A</button></td>
+		<td><button class="btnCol" id="btnB" onclick="jeton('#btnB')">B</button></td>
+		<td><button class="btnCol" id="btnC" onclick="jeton('#btnC')">C</button></td>
+		<td><button class="btnCol" id="btnD" onclick="jeton('#btnD')">D</button></td>
+		<td><button class="btnCol" id="btnE" onclick="jeton('#btnE')">E</button></td>
+		<td><button class="btnCol" id="btnF" onclick="jeton('#btnF')">F</button></td>
+		<td><button class="btnCol" id="btnG" onclick="jeton('#btnG')">G</button></td>
 	</tr>
    </table>
+   <div id="selectColor">
+   	<input id="inputColor1">
+   	<input id="inputColor2">
+   	<button onclick="choiseColor()">Choisir les couleurs</button>
+	<button onclick="effacer()">Effacer les champs</button>
+   </div>
 </html>
