@@ -159,11 +159,9 @@ function jeton(id) {
 
 function darkTheme() {
 	if (themeVal == 0) {
-		alert("Passage au thème sombre");
 		$("link").attr("href","style2.css");
 		themeVal=1;
 	} else {
-		alert("Passage au thème clair");
 		$("link").attr("href","style.css");
 		themeVal=0;
 	}
