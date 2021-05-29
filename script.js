@@ -15,6 +15,7 @@ var colorList=["red","yellow"];
 var color=colorList[0];
 var victoire = 0;
 var victoirej = 0;
+var themeVal = 0;
 
 function effacer() {
 	$("#inputColor1").val("");
@@ -154,4 +155,16 @@ function jeton(id) {
 	if (victoire==4) {alert("joueur "+victoirej+" gagne");}
 	victoire=0;*/
 
+}
+
+function darkTheme() {
+	if (themeVal == 0) {
+		alert("Passage au thème sombre");
+		$("link").attr("href","style2.css");
+		themeVal=1;
+	} else {
+		alert("Passage au thème clair");
+		$("link").attr("href","style.css");
+		themeVal=0;
+	}
 }

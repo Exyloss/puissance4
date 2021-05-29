@@ -22,24 +22,24 @@ td {
     	width: 50px;
     	height: 50px;
 }
-
+td button {
+	background-color: black;
+}
 #container {
 	display: flex;
 	flex-direction: row;
 }
-
 .btnCol {
 	width: 54px;
 	height: 50px;
-	border: none;
+	color: black;
+	border: 0px;
 	background-color: lightgray;
 }
-
 .btnCol:hover {
-	transition: 0.3s;
-	background-color: gray;
+	transition: 0.2s;
+	background-color: #6B6B6B;
 }
-
 #selectColor {
 	margin-top: 15px;
 	display: flex;
@@ -47,9 +47,18 @@ td {
 }
 #selectColor button {
 	margin-bottom: 5px;
-
+	border: 1px solid darkgray;
+	color: black;
+	background-color: lightgray;
+}
+#selectColor button:hover {
+	transition: 0.2s;
+	background-color: #6B6B6B;
 }
 #selectColor input {
 	margin-bottom: 5px;
 
 }
+
+
+
