@@ -27,27 +27,26 @@ function choiseColor() {
 		color=colorList[0];
 	}
 }
+
 function jeton(id) {
 	colonne = id[4];
 	console.log(dicValue);
 	for (i=7;i>=1;i--) {
 		if(dicValue["#"+colonne+i] == 0) {
 			$("#"+colonne+i).css("background-color",color);
-			if ( color==colorList[0] ) {
+			if ( color==colorList[0]) {
 				dicValue["#"+colonne+i] = 1;
+				color=colorList[1];
 				console.log(dicValue);
 			} else if ( color==colorList[1] ) {
 				dicValue["#"+colonne+i] = 2;
+				color=colorList[0];
 				console.log(dicValue);
 			}
 			break;
 		}
 	}
-	if (color == colorList[0]) {
-		color = colorList[1];
-	} else {
-		color=colorList[0];
-	}
+	lenCol=0;	
 	for (i=1;i<=7;i++) {	//Vérifie si un joueur a gagné en horizontalité
 		for (j=0;j<=6;j++) {
 			if (victoire == 3) {
