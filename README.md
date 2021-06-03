@@ -1,5 +1,7 @@
 # Projet NSI : Puissance 4
 
+site : https://exyloss.github.io/puissance4
+
 ## I - Fonctionnement du programme 
 ### 1. HTML
 Les différentes cases ont été écrites avec l'éditeur de texte vim afin d'accélérer leur création. Vim permet de créer des "macros", ce sont des répétitions de touches enregistrées dans un registre. Ces macros sont donc très utiles afin de répéter certaines actions, comme par exemple pour modifier les chiffres et les lettres des id des cases sur des dizaines de lignes.
