@@ -17,7 +17,7 @@ Le code javascript est composé de plusieurs fonctions :
 
 ## II - Problèmes rencontrés
 ### 1. CSS
-Nous avons eu des difficultés à centrer la grille dans le CSS, le code pour centrer (présent dans le body) a été trouvé sur internet.
+Nous avons eu des difficultés à centrer la grille dans le CSS, le code pour centrer (présent dans la partie HTML) a été trouvé sur internet.
 
 ### 2. JavaScript
 Nous avions créé un ancien code afin de détécter si un joueur avait gagné, mais celui-ci avait quelques problèmes, nous l'avons laissé en commentaire.
