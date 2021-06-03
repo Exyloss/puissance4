@@ -62,7 +62,7 @@ function jeton(id) {
 			} else {victoire=0;}
 		}
 	}
-	if (victoire == 3) {alert("joueur "+victoirej+" gagne")}
+	if (victoire == 3) {alert("Joueur "+victoirej+" gagne")}
 	victoire=0;
 	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
@@ -75,7 +75,7 @@ function jeton(id) {
 			} else {victoire=0;}
 		}
 	}
-	if (victoire==3) {alert("joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
 	victoire=0;
 	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
@@ -90,7 +90,7 @@ function jeton(id) {
 			}	
 		}
 	}
-	if (victoire==3) {alert("joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
 	victoire=0;
 	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
@@ -105,7 +105,7 @@ function jeton(id) {
 			}
 		}
 	}
-	if (victoire==3) {alert("joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
 	victoire=0;
 
 
