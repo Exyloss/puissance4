@@ -12,3 +12,11 @@ Le code javascript est composé de plusieurs fonctions :
 2. La fonction ``darkTheme()`` entre 2 feuilles de style, l'une est celle par défaut et l'autre est celle avec d'est fonds sombres.
 
 3. La fonction ``choiseColor()`` permet de choisir la couleur des jetons, si les inputs sont vides, les couleurs par défaut sont choisies (rouge et jaune). Les couleurs peuvent être rentrées en hexadecimal ou en anglais.
+
+## II - Problèmes rencontrés
+### 1. CSS
+Nous avons eu des difficultés à centrer la grille dans le CSS, le code pour centrer (présent dans le body) a été trouvé sur internet.
+
+### 2. JavaScript
+Nous avions créé un ancien code afin de détécter si un joueur avait gagné, mais celui-ci avait quelques problèmes, nous l'avons laissé en commentaire.
+
