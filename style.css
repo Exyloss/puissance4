@@ -1,64 +1,133 @@
-html{
-        display: flex;
-        flex-direction: row;  
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        height:100%;
-        margin: 0;
-        padding: 0;
+@media (prefers-color-scheme: dark) {
+	
+	html{
+	        display: flex;
+	        flex-direction: row;  
+	        justify-content: center;
+	        align-content: center;
+	        align-items: center;
+	        height:100%;
+	        margin: 0;
+	        padding: 0;
+		color: lightgray;
+	}
+	
+	body {
+	        margin: 0;
+	        flex: 0 1 auto;
+	        align-self: auto;
+	        height: 100%;
+	        max-height: 800px;
+		background-color: #262626;
+	}
+	
+	td {
+	    	border: lightgray solid 2px;
+	    	width: 50px;
+	    	height: 50px;
+	}
+
+	#container {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.btnCol {
+		width: 54px;
+		height: 50px;
+		border: none;
+		background-color: #353535;
+		color: white;
+	}
+	.btnCol:hover {
+		transition: 0.2s;
+		background-color: #3F3F3F;
+	}
+	
+	#selectColor {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	#selectColor button {
+		margin-bottom: 5px;
+		background-color: #353535;
+		color: white;
+		border: 1px solid black;
+	}
+	#selectColor button:hover {
+		transition: 0.2s;
+		background-color: #3F3F3F;
+	}
+	#selectColor input {
+		margin-bottom: 5px;
+		background-color: #3F3F3F;
+		color: white;
+		border: 1px solid black;
+	
+	}
 }
 
-body {
-        margin: 0;
-        flex: 0 1 auto;
-        align-self: auto;
-        height: 100%;
-        max-height: 800px;
+@media (prefers-color-scheme: light) {
+		
+	html{
+	        display: flex;
+	        flex-direction: row;  
+	        justify-content: center;
+	        align-content: center;
+	        align-items: center;
+	        height:100%;
+	        margin: 0;
+	        padding: 0;
+	}
+	
+	body {
+	        margin: 0;
+	        flex: 0 1 auto;
+	        align-self: auto;
+	        height: 100%;
+	        max-height: 800px;
+	}
+	
+	td {
+	    	border: black solid 2px;
+	    	width: 50px;
+	    	height: 50px;
+	}
+	td button {
+		background-color: black;
+	}
+	#container {
+		display: flex;
+		flex-direction: row;
+	}
+	.btnCol {
+		width: 54px;
+		height: 50px;
+		color: black;
+		border: 0px;
+		background-color: lightgray;
+	}
+	.btnCol:hover {
+		transition: 0.2s;
+		background-color: #6B6B6B;
+	}
+	#selectColor {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	#selectColor button {
+		margin-bottom: 5px;
+		border: 1px solid darkgray;
+		color: black;
+		background-color: lightgray;
+	}
+	#selectColor button:hover {
+		transition: 0.2s;
+		background-color: #6B6B6B;
+	}
+	#selectColor input {
+		margin-bottom: 5px;
+	}
 }
-
-td {
-    	border: black solid 2px;
-    	width: 50px;
-    	height: 50px;
-}
-td button {
-	background-color: black;
-}
-#container {
-	display: flex;
-	flex-direction: row;
-}
-.btnCol {
-	width: 54px;
-	height: 50px;
-	color: black;
-	border: 0px;
-	background-color: lightgray;
-}
-.btnCol:hover {
-	transition: 0.2s;
-	background-color: #6B6B6B;
-}
-#selectColor {
-	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-}
-#selectColor button {
-	margin-bottom: 5px;
-	border: 1px solid darkgray;
-	color: black;
-	background-color: lightgray;
-}
-#selectColor button:hover {
-	transition: 0.2s;
-	background-color: #6B6B6B;
-}
-#selectColor input {
-	margin-bottom: 5px;
-
-}
-
-
-

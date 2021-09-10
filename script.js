@@ -159,12 +159,3 @@ function jeton(id) {
 
 }
 
-function darkTheme() {
-	if (themeVal == 0) {
-		$("link").attr("href","style2.css");
-		themeVal=1;
-	} else {
-		$("link").attr("href","style.css");
-		themeVal=0;
-	}
-}
