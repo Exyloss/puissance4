@@ -36,6 +36,7 @@ var dicValue = {
 "#G1":0,"#G2":0,"#G3":0,"#G4":0,"#G5":0,"#G6":0,"#G7":0,
 };
 var colorList=["red","yellow"];
+var playerList=["Joueur 1", "Joueur 2"]
 var color=colorList[0];
 var victoire = 0;
 var victoirej = 0;
@@ -52,6 +53,14 @@ function choiseColor() {
 		colorList=[$("#inputColor1").val(),$("#inputColor2").val()];
 		color=colorList[0];
 	}
+}
+
+function choisePlayer() {
+    j1 = $("#inputPlayer1").val()
+    j2 = $("#inputPlayer2").val()
+    if (j1 != j2 && j1 != "" && j2 != "") {
+        playerList=[j1, j2]
+    }
 }
 
 function jeton(id) {
@@ -78,13 +87,12 @@ function jeton(id) {
 		for (j=0;j<=6;j++) {
 			if (victoire == 3) {break;}
 			if (dicValue["#"+listLettre[j]+i]==dicValue["#"+listLettre[j+1]+i] && dicValue["#"+listLettre[j]+i]!=0) {
-				victoirej=dicValue["#"+listLettre[j+1]+i];
+	    		victoirej=playerList[dicValue["#"+listLettre[j+1]+i]-1];
 				victoire++;
-				console.log(victoire+"  "+dicValue["#"+listLettre[j]+i]+" "+dicValue["#"+listLettre[j+1]+i]);
 			} else {victoire=0;}
 		}
 	}
-	if (victoire == 3) {alert("Joueur "+victoirej+" gagne")}
+	if (victoire == 3) {alert(victoirej+" gagne.")}
 	victoire=0;
 	for (i=0;i<=6;i++) {
 		for (j=1;j<=7;j++) {
@@ -92,25 +100,25 @@ function jeton(id) {
 				break;
 			}
 			if (dicValue["#"+listLettre[i]+j]==dicValue["#"+listLettre[i]+(j-1)] && dicValue["#"+listLettre[i]+(j-1)]!=0) {
-				victoirej=dicValue["#"+listLettre[i]+(j-1)];
+	    		victoirej=playerList[dicValue["#"+listLettre[i]+(j-1)]-1];
 				victoire++;
 			} else {victoire=0;}
 		}
 	}
-	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert(victoirej+" gagne")}
 	victoire=0;
 	for (i=3;i<=6;i++) {
 		for (j=1;j<=4;j++) {
 			for (k=0;k<=2;k++) {
 				if (victoire==3) {break;}
 				if (dicValue["#"+listLettre[i-k]+(j+k)]==dicValue["#"+listLettre[i-k-1]+(j+k+1)] && dicValue["#"+listLettre[i-k-1]+(j+k+1)]!=0) {
-					victoirej=dicValue["#"+listLettre[i-k-1]+(j+k+1)];
+					victoirej=playerList[dicValue["#"+listLettre[i-k-1]+(j+k+1)]-1];
 					victoire++;
 				} else {victoire=0;}
 			}	
 		}
 	}
-	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert(victoirej+" gagne")}
 	victoire=0;
 	for (i=1;i<=4;i++) {
 		for (j=1;j<=4;j++) {
@@ -119,13 +127,13 @@ function jeton(id) {
 					break;
 				}
 				if (dicValue["#"+listLettre[i+k]+(j+k)]==dicValue["#"+listLettre[i+k+1]+(j+k+1)] && dicValue["#"+listLettre[i+k]+(j+k)]!=0) {
-					victoirej=dicValue["#"+listLettre[i+k+1]+(j+k+1)];
+					victoirej=playerList[dicValue["#"+listLettre[i+k+1]+(j+k+1)]-1];
 					victoire++;
 				} else {victoire=0;}
 			}
 		}
 	}
-	if (victoire==3) {alert("Joueur "+victoirej+" gagne")}
+	if (victoire==3) {alert(victoirej+" gagne")}
 	victoire=0;
 }
 
