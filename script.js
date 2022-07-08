@@ -104,7 +104,7 @@ function jeton(id) {
 			for (k=0;k<=2;k++) {
 				if (victoire==3) {break;}
 				if (dicValue["#"+listLettre[i-k]+(j+k)]==dicValue["#"+listLettre[i-k-1]+(j+k+1)] && dicValue["#"+listLettre[i-k-1]+(j+k+1)]!=0) {
-					victoirej=dicValue["#"+listLettre[i+k+1]+(j-k-1)];
+					victoirej=dicValue["#"+listLettre[i-k-1]+(j+k+1)];
 					victoire++;
 				} else {victoire=0;}
 			}	
