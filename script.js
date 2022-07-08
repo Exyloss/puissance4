@@ -52,6 +52,10 @@ function choiseColor() {
 	if ($("#inputColor1").val() != $("#inputColor2").val() && $("#inputColor1").val() != "white" && $("#inputColor2").val() != "white" && $("#inputColor2").val() != "#000000" && $("#inputColor1").val() != "#000000" && choise == 0) {
 		colorList=[$("#inputColor1").val(),$("#inputColor2").val()];
 		color=colorList[0];
+        $("#j1_color").text(colorList[0])
+        $("#j2_color").text(colorList[1])
+        $("#inputColor1").val("")
+        $("#inputColor2").val("")
 	}
 }
 
@@ -60,6 +64,10 @@ function choisePlayer() {
     j2 = $("#inputPlayer2").val()
     if (j1 != j2 && j1 != "" && j2 != "") {
         playerList=[j1, j2]
+        $("#j1_name").text(playerList[0])
+        $("#j2_name").text(playerList[1])
+        $("#inputPlayer1").val("")
+        $("#inputPlayer2").val("")
     }
 }
 
